@@ -81,11 +81,18 @@ a {
     padding: 0 10px;    
 }
 
-.close:hover {
+.close-pro {
+    position: relative;
+    right: -20px;
+    padding: 0 10px;    
+}
+
+
+.close:hover , .close-pro:hover {
     background: red;
 }
 
-button {
+#main button {
     margin: 10px 10px 10px 0;
     padding: 10px 30px;
     border-radius: 10px;
@@ -96,7 +103,19 @@ button:hover {
     color: white;
 }
 
-input {
+#main input {
     padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+}
+
+#sidebar button {
+    margin: 5px 5px 5px 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+#sidebar input {
+    padding: 5px 10px;
+    width: 80px;
     border-radius: 5px;
 }
