@@ -1,9 +1,9 @@
 
 
 const main = document.getElementById("main");
-const newTask = document.getElementById("new-task");
-const inbox = document.getElementById("inbox");
-const addPro = document.getElementById("add-pro");
+// const newTask = document.getElementById("new-task");
+// const inbox = document.getElementById("inbox");
+// const addPro = document.getElementById("add-pro");
 const addB = document.getElementById("add");
 var closebtns = document.getElementsByClassName("close");
 var items = document.getElementsByClassName("item");
@@ -14,17 +14,28 @@ function closeItem() { for (let i=0; i < closebtns.length; i++) {
     });
 }};
 
-function checkItem() {    
+function checkItem() { 
     for (let j=0; j < items.length; j++) {
-    items[j].addEventListener("click", function() {
-        this.classList.toggle("checked");
-        });
-}};
+    items[j].addEventListener("click", function(e) {
+        if (e.target.classList.contains("checked")== true) {
+            this.classList.remove("checked");
+        } else {
+            this.classList.add("checked");
+        };
+    })}
+};
+
+    // for (let j=0; j < items.length; j++) {
+    // items[j].addEventListener("click", function() {
+    //     this.classList.toggle("checked");
+    //     });
+// }};
 
 
-var input = document.getElementById("task");
+
 
 function newItem() {
+    var input = document.getElementById("task");
     if (input.value === "") {
         alert("You must write something!");
     } else {
@@ -40,7 +51,8 @@ function newItem() {
         div.appendChild(li);
         div.appendChild(span);
         div.classList = "item";
-        main.appendChild(div);
+        // main.appendChild(div);
+        items.push(div);
     };
 
     // main.innerHTML += `<div class="item"><li>${input.value}</li><span class="close">&times;</span></div>`;
@@ -50,7 +62,6 @@ function newItem() {
 function addNew() {
     addB.addEventListener("click", function() {
     newItem();
-    // checkItem();    
     closeItem();
 
     items[items.length-1].addEventListener("click", function() {
@@ -58,6 +69,13 @@ function addNew() {
         });
 
     })};
+    
+    // function addToLocalStorage(todos) {
+    //     localStorage.setItem('todos', JSON.stringify(todos));
+
+    // }
+
+
 
 
     export {closeItem, checkItem, addNew };
