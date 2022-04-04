@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,10 +18,10 @@
         <path fill="currentColor" d="M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" />
     </svg> <li>Inbox</li></div>
         <h3>Projects</h3>
-       <!-- <div id="add-pro"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <div id="add-pro"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
     </svg><li>Add Project</li></div> -->
-    <div id="add-pro"><input type="text" id="project" placeholder="new project...">
+    <!-- <div id="add-pro"><input type="text" id="project" placeholder="new project...">
         <button id="add-pro-btn" type="button">Add</button></div>
     <div id="item-pro"><li>School</li><span class="close-pro">&times;</span></div>
 </div>
@@ -29,12 +29,44 @@
     <h2 class="title">Inbox</h2>
       <div id="add-task"><input type="text" id="task" placeholder="new task...">
         <button id="add" type="button">Add</button></div>
-    <div class="item"><li>Hit the gym</li><span class="close">&times;</span></div>
+    <div id="items"><div class="item"><li>Hit the gym</li><span class="close">&times;</span></div>
     <div class="item checked"><li>Pay bills</li><span class="close">&times;</span></div>
-</div>
+</div></div>
 <div id="footer">
     <p>2022 <a href="https://github.com/Sajadmhy">Sajad Mahyeai</a></p>
 </div>
 </div>
+</body>
+ </html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Todo List</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Todo</h1>
+
+    <form class="todo-form">
+      <input type="text" class="todo-input" placeholder="Add a Todo...">
+      <button type="submit" class="add-button">Add</button>
+    </form>
+
+    <ul class="todo-items">
+      <li class="item" data-key="1594003133171">
+        <input class="checkbox" type="checkbox">
+        Go to Gym
+        <button class="delete-button">X</button>
+      </li>
+    </ul>
+  </div>
+  
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
