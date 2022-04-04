@@ -119,3 +119,7 @@ button:hover {
     width: 80px;
     border-radius: 5px;
 }
+
+h3 {
+    padding: 10px;
+}
